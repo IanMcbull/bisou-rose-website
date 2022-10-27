@@ -1,8 +1,8 @@
-import nailBarImage from '../assets/images/nail-bar-wide-image.jpg';
+import nailBarImage from '../assets/images/nail-polish-image.jpg';
 const serviceStyles = {
     backgroundImage: `url(${nailBarImage})`,
     backgroundSize: 'cover',
-    backgroundPosition: 'left',
+    backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
 
 }
@@ -31,7 +31,7 @@ function Services() {
           <span className="button-text">Learn More</span>
         </button>
       </div>
-        <div className="flex flex-col justify-center items-center h-[400px] w-[400px] lg:h-[600px] lg:w-[600px] rounded-full border-none shadow-2xl mx-auto" style={serviceStyles}>
+        <div className="flex flex-col justify-center items-center h-[400px] w-[400px] lg:h-[600px] lg:w-[600px] shadow-2xl mx-auto rounded-full" style={serviceStyles}>
         </div>
     </section>
   );

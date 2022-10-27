@@ -1,4 +1,4 @@
-import background from "../assets/images/corousel-1.jpg";
+import background from "../assets/images/corousel-2.jpg";
 import Logo from "../assets/images/logo.png";
 import { FaBars } from "react-icons/fa"
 import {
@@ -12,7 +12,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 const styles = {
-  backgroundImage: `linear-gradient(rgba(4,9,30,0.8),rgba(4,9,30,0.6)),url(${background})`,
+  backgroundImage: `linear-gradient(rgba(4,9,30,0.8),rgba(4,9,30,0.2)),url(${background})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
@@ -36,7 +36,7 @@ function Header() {
         <div className="flex flex-col h-96 justify-center container mx-auto gap-5 items-center place-self-center">
           <h1 className="text-white text-6xl font-Cinzel font-semibold text-center">Bisou Rose</h1>
           <p className="text-white text-2xl font-Cinzel font-semibold text-center">The best place for your wedding</p>
-         <button className="bg-gradient-to-r from-chocolateBrown via-darkBrown to-chocolateBrown p-4 text-white font-bold shadow-xl">Book an Appointment</button>
+         <button className="bg-[#814d2a] p-4 text-white font-bold shadow-xl">Book an Appointment</button>
         </div>
         <Drawer
         isOpen={isOpen}
