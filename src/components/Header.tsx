@@ -25,9 +25,9 @@ function Header() {
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
             <a href="#" className="text-white text-xl font-semibold">Home</a>
-            <a href="#" className="text-white text-xl font-semibold ml-28">Services</a>
-            <a href="#" className="text-white text-xl font-semibold ml-28">Gallery</a>
-            <a href="#" className="text-white text-xl font-semibold ml-28">Contact</a>
+            <a href="#services" className="text-white text-xl font-semibold ml-28">Services</a>
+            <a href="#gallery" className="text-white text-xl font-semibold ml-28">Gallery</a>
+            <a href="#contact" className="text-white text-xl font-semibold ml-28">Contact</a>
           </div>
           <div className="lg:hidden flex pr-4">
             <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl"/></button>

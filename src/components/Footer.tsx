@@ -3,7 +3,7 @@ import Logo from "../assets/images/logo.png";
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter,FaMapPin } from "react-icons/fa"
 function Footer() {
   return (
-    <footer className="min-h-[300px] bg-black w-full flex items-center p-6">
+    <footer className="min-h-[300px] bg-black w-full flex items-center p-6" id="footer">
       <section className="container mx-auto flex flex-col space-y-6 md:flex-row items-center">
         <div className="w-1/4 flex flex-col space-y-16 items-center mb-8">
           <img src={Logo} alt="footer logo" className="w-24" />

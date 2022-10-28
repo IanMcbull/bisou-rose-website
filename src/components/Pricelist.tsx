@@ -1,7 +1,7 @@
 import Logo from "../assets/images/logo.png";
 function Pricelist() {
   return (
-    <section className="container mx-auto max-h-[150vh] flex flex-col justify-center items-center p-4 mb-10">
+    <section className="container mx-auto max-h-[150vh] flex flex-col justify-center items-center p-4 mb-10" id="pricelist">
      <img src={Logo} alt="Logo" className="w-44"/>
      <div className="w-full h-96 flex flex-col">
          <div className="grid grid-cols-1 md:grid-cols-2 gap-28">
