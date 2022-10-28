@@ -12,7 +12,7 @@ function Footer() {
               Copyright &#169;2022
             </p>
             <p className="text-white text-justify font-Cinzel text-sm ">
-              Here to serve you
+            Masterpiece to beauty
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ function Footer() {
               </div>
               <div className="flex space-x-2">
               <FaMapPin className="text-white text-2xl"/>
-              <p className="max-w-[400px] text-sm font-semibold">Novu Apartments, Waiyaki Way</p>
+              <p className="max-w-[400px] text-sm font-semibold">Nova Apartments, Waiyaki Way</p>
               </div>
             </div>
           </div>
