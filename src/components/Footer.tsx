@@ -1,6 +1,6 @@
 import background from "../assets/images/corousel-2.jpg";
 import Logo from "../assets/images/logo.png";
-import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter, FaLocationArrow, FaMapPin } from "react-icons/fa"
+import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter,FaMapPin } from "react-icons/fa"
 function Footer() {
   return (
     <footer className="min-h-[300px] bg-black w-full flex items-center p-6">
