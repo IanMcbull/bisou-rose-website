@@ -20,7 +20,7 @@ const styles = {
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <header className="min-h-[100vh] kenburns-top-right flex flex-col font-Cinzel" style={styles}>
+    <header className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
         <nav className="container mx-auto flex justify-between items-center py-10">
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
