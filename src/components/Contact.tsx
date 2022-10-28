@@ -1,14 +1,14 @@
 import Map, {Marker} from 'react-map-gl';
 function Contact() {
   return (
-    <div className="min-h-[100vh] grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-12">
-      <div className="flex flex-col justify-center gap-10">
+    <div className="min-h-[100vh] grid grid-cols-1 lg:grid-cols-2 container mx-auto ">
+      <div className="flex flex-col justify-center gap-10 px-6 shadow-2xl">
         <h1 className="text-6xl font-Cinzel font-semibold">Contact Us</h1>
         <p className="text-xl font-Cinzel font-semibold">We are here to help you</p>
         <form>
-            <div className="flex gap-12">
-                <input type="text" placeholder="First Name" className="p-4 border-2 border-black"/>
-                <input type="text" placeholder="Last Name" className="p-4 w-full border-2 border-black"/>
+            <div className="flex">
+                <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full"/>
+                
             </div>
                 <input type="email" placeholder="Email" className="p-4 border-2 border-black w-full mt-6"/>
                 <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-6"/>
