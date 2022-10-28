@@ -7,7 +7,7 @@ function Footer() {
       <section className="container mx-auto flex flex-col space-y-6 md:flex-row items-center">
         <div className="w-1/4 flex flex-col space-y-16 items-center mb-8">
           <img src={Logo} alt="footer logo" className="w-24" />
-          <div className="space-y-1">
+          <div className="space-y-1 min-w-[200px]">
             <p className="text-white font-Cinzel text-md font-semibold">
               Copyright &#169;2022
             </p>
@@ -17,9 +17,9 @@ function Footer() {
           </div>
         </div>
         <div className="w-3/4 flex flex-col space-y-16">
-          <div className="flex justify-between  flex-wrap gap-4">
+          <div className="flex justify-between flex-wrap gap-4 items-center">
             <div className="flex flex-col gap-10 ">
-              <div className="flex justify-between min-w-[450px]">
+              <div className="flex justify-between w-[300px] md:min-w-[450px]">
                 <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
                   Option 1
                 </h1>
@@ -42,7 +42,7 @@ function Footer() {
                 </h1>
               </div>
             </div>
-            <button className="footer-btn shadow-2xl font-Cinzel"> Contact Us</button>
+            <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0"> Contact Us</button>
           </div>
           <div className="text-white font-Cinzel">
             <p className="mb-4 font-bold text-sm">

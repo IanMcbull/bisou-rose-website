@@ -34,7 +34,7 @@ function Header() {
           </div>
         </nav>
         <div className="flex flex-col h-96 justify-center container mx-auto gap-5 items-center place-self-center">
-          <h1 className="text-white text-6xl font-Cinzel font-semibold text-center">Bisou Rose</h1>
+          <h1 className="text-lightBrown text-6xl font-Cinzel font-semibold text-center">Bisou Rose</h1>
           <p className="text-white text-2xl font-Cinzel font-semibold text-center">The best place for your wedding</p>
          <button className="bg-[#814d2a] p-4 text-white font-bold shadow-xl">Book an Appointment</button>
         </div>

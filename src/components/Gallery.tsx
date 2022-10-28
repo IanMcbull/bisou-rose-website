@@ -5,7 +5,7 @@ import CardFour from "../assets/images/macbook-table-image.jpg"
 import CardFive from "../assets/images/nail-polish-image.jpg"
 function Gallery() {
   return (
-    <section className="my-44">
+    <section className="my-44 p-4">
         <h2 className="text-center text-6xl font-Cinzel font-semibold mb-24">Gallery</h2>
         <div className="min-h-[50vh] container mx-auto grid grid-cols-1 grid-rows-1 lg:grid-cols-2 lg:grid-rows-2 gap-10">
         <div className="row-span-1 md:row-span-2">
