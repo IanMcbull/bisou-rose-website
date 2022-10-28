@@ -31,7 +31,7 @@ function Services() {
           <span className="button-text">Learn More</span>
         </button>
       </div>
-        <div className="flex flex-col justify-center items-center h-[400px] w-[400px] lg:h-[600px] lg:w-[600px] shadow-2xl mx-auto rounded-full" style={serviceStyles}>
+        <div className="flex flex-col justify-center items-center h-[300px] w-[300px] lg:h-[600px] lg:w-[600px] shadow-2xl mx-auto rounded-full" style={serviceStyles}>
         </div>
     </section>
   );
