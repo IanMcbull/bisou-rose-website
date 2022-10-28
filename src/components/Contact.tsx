@@ -1,9 +1,9 @@
 import Map, {Marker} from 'react-map-gl';
 function Contact() {
   return (
-    <div className="min-h-[100vh] grid grid-cols-1 lg:grid-cols-2 container mx-auto ">
+    <div className="min-h-[100vh] grid grid-cols-1 lg:grid-cols-2 container mx-auto gap-10">
       <div className="flex flex-col justify-center gap-10 px-6 shadow-2xl">
-        <h1 className="text-6xl font-Cinzel font-semibold">Contact Us</h1>
+        <h1 className="text-4xl md:text-6xl font-Cinzel font-semibold">Contact Us</h1>
         <p className="text-xl font-Cinzel font-semibold">We are here to help you</p>
         <form>
             <div className="flex">

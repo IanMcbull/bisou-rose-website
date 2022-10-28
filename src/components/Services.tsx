@@ -8,7 +8,7 @@ const serviceStyles = {
 }
 function Services() {
   return (
-    <section className="container mx-auto min-h-[100vh] grid grid-cols-1 md:grid-cols-2 gap-24 items-center p-4">
+    <section className="container mx-auto min-h-[100vh] grid grid-cols-1 md:grid-cols-2 gap-24 items-center sm:p-6 md:p-4">
       <div className="flex flex-col justify-center text-justify gap-6">
         <h1 className="text-4xl lg:text-5xl font-Cinzel font-semibold">Our Services</h1>
         <p className="text-sm md:text-md font-Cinzel font-semibold">
