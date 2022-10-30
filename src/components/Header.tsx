@@ -1,6 +1,7 @@
 import background from "../assets/images/corousel-2.jpg";
 import Logo from "../assets/images/logo.png";
 import { FaBars } from "react-icons/fa"
+import { Link, animateScroll as scroll } from "react-scroll";
 import {
   Drawer,
   DrawerBody,
@@ -25,9 +26,32 @@ function Header() {
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
             <a href="#" className="text-white text-xl font-semibold">Home</a>
-            <a href="#services" className="text-white text-xl font-semibold ml-28">Services</a>
-            <a href="#gallery" className="text-white text-xl font-semibold ml-28">Gallery</a>
-            <a href="#contact" className="text-white text-xl font-semibold ml-28">Contact</a>
+            {/* <a href="#services" className="text-white text-xl font-semibold ml-28">Services</a> */}
+            <a href="services"><Link
+            className="text-white text-xl font-semibold ml-28"
+    activeClass="active"
+    to="services"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={700}
+>Services</Link></a>
+            <a href="#gallery"><Link
+    className="text-white text-xl font-semibold ml-28"
+    to="gallery"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={900}
+>Gallery</Link></a>
+            <a href="#contact"><Link
+    className="text-white text-xl font-semibold ml-28"
+    to="contact"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={900}
+>Contact</Link></a>
           </div>
           <div className="lg:hidden flex pr-4">
             <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl"/></button>
