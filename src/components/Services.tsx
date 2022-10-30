@@ -28,7 +28,7 @@ function Services() {
           <span className="circle" aria-hidden="true">
             <span className="icon arrow"></span>
           </span>
-          <span className="button-text">Learn More</span>
+          <span className="button-text">Lashes</span>
         </button>
       </div>
         <div className="flex flex-col justify-center items-center h-[300px] w-[300px] lg:h-[600px] lg:w-[600px] shadow-2xl mx-auto rounded-full" style={serviceStyles}>

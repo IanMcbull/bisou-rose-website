@@ -3,7 +3,7 @@ import Logo from "../assets/images/logo.png";
 import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter,FaMapPin } from "react-icons/fa"
 function Footer() {
   return (
-    <footer className="min-h-[300px] bg-black w-full flex items-center p-6" id="footer">
+    <footer className="min-h-[300px] bg-black w-full flex items-center p-6 mt-12" id="footer">
       <section className="container mx-auto flex flex-col space-y-6 md:flex-row items-center">
         <div className="w-1/4 flex flex-col space-y-16 items-center mb-8">
           <img src={Logo} alt="footer logo" className="w-24" />
@@ -17,37 +17,13 @@ function Footer() {
           </div>
         </div>
         <div className="w-3/4 flex flex-col space-y-16">
-          <div className="flex justify-between flex-wrap gap-4 items-center">
-            <div className="flex flex-col gap-10 ">
-              <div className="flex justify-between w-[300px] md:min-w-[450px]">
-                <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
-                  Option 1
-                </h1>
-                <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
-                  Option 2
-                </h1>
-                <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
-                  Option 3
-                </h1>
-              </div>
-              <div className="flex justify-between">
-                <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
-                  Option 4
-                </h1>
-                <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
-                  Option 5
-                </h1>
-                <h1 className="text-white text-sm font-Cinzel text-md font-semibold border-l-2 border-white pl-2">
-                  Option 6
-                </h1>
-              </div>
-            </div>
+          <div className="flex justify-between flex-wrap gap-4 items-center"> 
             <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0"> Contact Us</button>
           </div>
           <div className="text-white font-Cinzel">
             <p className="mb-4 font-bold text-sm">
               Give us a call
-              <span className="font-light ml-4"> (254) 705977072</span>
+              <span className="font-light ml-4"> (254) 743 565 565</span>
             </p>
             <hr className="text-white font-bold" />
             <div className="flex flex-col justify-between mt-6 md:flex-row md:items-center gap-4">
