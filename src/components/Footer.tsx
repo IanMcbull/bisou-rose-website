@@ -1,6 +1,6 @@
 import background from "../assets/images/corousel-2.jpg";
 import Logo from "../assets/images/logo.png";
-import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter,FaMapPin } from "react-icons/fa"
+import { FaTiktok, FaInstagram, FaTwitter,FaMapPin } from "react-icons/fa"
 function Footer() {
   return (
     <footer className="min-h-[300px] bg-black w-full flex items-center p-6 mt-12" id="footer">
@@ -28,10 +28,8 @@ function Footer() {
             <hr className="text-white font-bold" />
             <div className="flex flex-col justify-between mt-6 md:flex-row md:items-center gap-4">
               <div className="social-links flex space-x-4">
-                    <FaFacebook className="text-white text-2xl"/>
-                    <FaLinkedin className="text-white text-2xl"/>
-                    <FaInstagram className="text-white text-2xl"/>
-                    <FaTwitter className="text-white text-2xl"/>
+                    <a href="https://instagram.com/officialbisourose?igshid=YmMyMTA2M2Y=" target="_blank"><FaInstagram className="text-white text-2xl"/></a>
+                    <a href="https://www.tiktok.com/@officialbisourose?_t=8Wxio4wNWRK&_r=1" target="_blank"><FaTiktok className="text-white text-2xl"/></a>
               </div>
               <div className="flex space-x-2">
               <FaMapPin className="text-white text-2xl"/>

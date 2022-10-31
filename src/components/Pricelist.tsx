@@ -65,9 +65,9 @@ function Pricelist() {
          </div>
      </div>
 
-<button className="buttonDownload self-end justify-end mt-32">Download Full Pricelist</button>
+<button className="buttonDownload self-end justify-end mt-32"><a href="https://drive.google.com/file/d/14DgR0v610bJ04e75ukFDfO873zjM4_b_/view" target="_blank">View Full Pricelist</a></button>
     </section>
   )
 }
 
-export default Pricelist
+export default Pricelist;
