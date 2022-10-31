@@ -91,10 +91,10 @@ function Header() {
         <DrawerContent className="p-4">
           <DrawerCloseButton />
           <div className="nav-links flex flex-col font-Cinzel mt-24 gap-6">
-            <a href="#" className="text-black text-2xl font-semibold">Home</a>
-            <a href="#" className="text-black text-2xl font-semibold ">Services</a>
-            <a href="#" className="text-black text-2xl font-semibold ">Gallery</a>
-            <a href="#" className="text-black text-2xl font-semibold">Contact</a>
+            <a href="/" className="text-black text-2xl font-semibold hover:text-lightBrown">Home</a>
+            <a href="#services" className="text-black text-2xl font-semibold hover:text-lightBrown">Services</a>
+            <a href="#gallery" className="text-black text-2xl font-semibold hover:text-lightBrown">Gallery</a>
+            <a href="#contact" className="text-black text-2xl font-semibold hover:text-lightBrown">Contact</a>
           </div>
         </DrawerContent>
       </Drawer>
