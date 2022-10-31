@@ -13,7 +13,17 @@ function Contact() {
                 <input type="email" placeholder="Email" className="p-4 border-2 border-black w-full mt-6"/>
                 <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-6"/>
                 <textarea placeholder="Message" className="p-4 border-2 border-black w-full mt-6 h-40"></textarea>
-                <button className="bg-[#814d2a] p-4 text-white font-bold shadow-2xl mt-6 w-full">Send Message</button>
+                <button className='contactBtn flex justify-center mt-6 w-28 shadow-2xl'>
+  <div className="svg-wrapper-1">
+    <div className="svg-wrapper">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+      </svg>
+    </div>
+  </div>
+  <span>Send</span>
+</button>
         </form>
       </div>
       <div id="map" className='w-full min-h-[300px]'>
