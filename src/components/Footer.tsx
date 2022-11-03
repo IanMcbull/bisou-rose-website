@@ -18,7 +18,7 @@ function Footer() {
         </div>
         <div className="w-3/4 flex flex-col space-y-16">
           <div className="flex justify-between flex-wrap gap-4 items-center"> 
-            <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0">Email Us</button>
+            <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0 mx-auto md:m-0">Email Us</button>
           </div>
           <div className="text-white font-Cinzel">
             <p className="mb-4 font-bold text-sm">
