@@ -80,6 +80,7 @@ function Header() {
          <button className="bg-[#814d2a] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
          onClick={openModal}
           >Book an Appointment</button>
+          <p className="font-bold text-white font-Cinzel text-xl"> (+254)743565565</p>
         </div>
         <Drawer
         isOpen={isOpen}

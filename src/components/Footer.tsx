@@ -18,12 +18,12 @@ function Footer() {
         </div>
         <div className="w-3/4 flex flex-col space-y-16">
           <div className="flex justify-between flex-wrap gap-4 items-center"> 
-            <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0"> Contact Us</button>
+            <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0">Email Us</button>
           </div>
           <div className="text-white font-Cinzel">
             <p className="mb-4 font-bold text-sm">
               Give us a call
-              <span className="font-light ml-4"> (254) 743 565 565</span>
+              <span className="font-light ml-4"> +254-743-565-565</span>
             </p>
             <hr className="text-white font-bold" />
             <div className="flex flex-col justify-between mt-6 md:flex-row md:items-center gap-4">
