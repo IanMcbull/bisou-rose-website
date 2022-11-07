@@ -7,9 +7,6 @@ import { Fragment, useState } from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
 import {
   Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
@@ -31,7 +28,8 @@ function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let [isopen, setIsOpen] = useState(false)
   const [selected, setSelected] = useState(people[0])
-  function closeModal() {
+ 
+   function closeModal() {
     setIsOpen(false)
   }
 
@@ -82,6 +80,7 @@ function Header() {
           >Book an Appointment</button>
           <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>
         </div>
+      
         <Drawer
         isOpen={isOpen}
 

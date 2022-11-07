@@ -1,6 +1,6 @@
 import background from "../assets/images/corousel-2.jpg";
 import Logo from "../assets/images/logo.png";
-import { FaTiktok, FaInstagram, FaTwitter,FaMapPin } from "react-icons/fa"
+import { FaTiktok, FaInstagram,FaMapPin } from "react-icons/fa"
 function Footer() {
   return (
     <footer className="min-h-[300px] bg-black w-full flex items-center p-6 mt-12" id="footer">
@@ -18,7 +18,7 @@ function Footer() {
         </div>
         <div className="w-3/4 flex flex-col space-y-16">
           <div className="flex justify-between flex-wrap gap-4 items-center"> 
-            <button className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0 mx-auto md:m-0">Email Us</button>
+            <a href="mailto:Info@bisourose.co.uk" className="footer-btn shadow-2xl font-Cinzel mt-6 md:mt-0 mx-auto md:m-0">Email Us</a>
           </div>
           <div className="text-white font-Cinzel">
             <p className="mb-4 font-bold text-sm">
