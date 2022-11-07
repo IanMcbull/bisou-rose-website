@@ -27,6 +27,9 @@ const people = [
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   let [isopen, setIsOpen] = useState(false)
+  const [fullName,setFullName] = useState('')
+  const [number,setPhoneNumber] = useState('')
+  const [date,setDate] = useState('')
   const [selected, setSelected] = useState(people[0])
  
    function closeModal() {
@@ -35,6 +38,10 @@ function Header() {
 
   function openModal() {
     setIsOpen(true)
+  }
+  const setName = (e: { target: { value: any; }; })=>{
+     const name = e.target.value
+     setFullName(name)
   } 
   return (
     <header className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
@@ -132,7 +139,7 @@ function Header() {
                   </Dialog.Title>
                   <div className="mt-4 font-Cinzel">
                     <form className="flex flex-col">
-                    <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full"/>
+                    <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full" value={fullName} onChange={setName}/>
                     <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-4"/>
                     <input type="date" className="p-4 border-2 border-black w-full mt-4"/>
                     
