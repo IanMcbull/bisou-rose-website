@@ -2,6 +2,9 @@ import background from "../assets/images/corousel-2.jpg";
 import Logo from "../assets/images/logo.png";
 import { FaBars } from "react-icons/fa";
 import { Dialog, Transition, Listbox } from '@headlessui/react'
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { HiCheck, HiChevronUpDown} from 'react-icons/hi2'
 import { Fragment, useState } from 'react'
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -25,6 +28,7 @@ const people = [
   { name: 'Barber Services' }
 ]
 function Header() {
+ 
   const { isOpen, onOpen, onClose } = useDisclosure();
   let [isopen, setIsOpen] = useState(false)
   const [fullName,setFullName] = useState('')
@@ -33,6 +37,30 @@ function Header() {
   const [selected, setSelected] = useState(people[0])
  
    function closeModal() {
+    console.log(fullName)
+    console.log(date)
+    console.log(number)
+    console.log(selected.name)
+
+    const templateParams = {
+      from_name: fullName,
+      to_name: 'Bisou',
+      appointment_date: date,
+      client_number: number,
+      message: selected.name,
+   };
+    try {
+      emailjs.send(
+        'service_cv4aqzr',
+        'template_fgsobhi',
+        templateParams,
+        'uEYl8RsJL5qf44q4b'
+    )
+    toast.success('Successfully Booked')
+    } catch (error) {
+     toast.error('Unable to book an appointment') 
+
+    }
     setIsOpen(false)
   }
 
@@ -43,6 +71,14 @@ function Header() {
      const name = e.target.value
      setFullName(name)
   } 
+  const setNumber = (e: { target: { value: any; }; })=>{
+    const number = e.target.value
+    setPhoneNumber(number)
+ } 
+ const setdate = (e: { target: { value: any; }; })=>{
+  const date = e.target.value
+  setDate(date)
+} 
   return (
     <header className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
         <nav className="container mx-auto flex justify-between items-center py-10">
@@ -140,8 +176,8 @@ function Header() {
                   <div className="mt-4 font-Cinzel">
                     <form className="flex flex-col">
                     <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full" value={fullName} onChange={setName}/>
-                    <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-4"/>
-                    <input type="date" className="p-4 border-2 border-black w-full mt-4"/>
+                    <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-4" value={number} onChange={setNumber}/>
+                    <input type="date" className="p-4 border-2 border-black w-full mt-4" value={date} onChange={setdate}/>
                     
                     <div className="flex flex-col mt-4">
                     <p className="font-semibold">Pick a Service</p>
@@ -215,6 +251,7 @@ function Header() {
           </div>
         </Dialog>
       </Transition>
+      <ToastContainer/>
     </header>
   )
 }
