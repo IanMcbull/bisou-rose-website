@@ -1,6 +1,8 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 
 const boxVariant = {
   visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
@@ -26,16 +28,12 @@ function Services() {
     }
   }, [control, inView]);
   return (
-    <motion.section className="container mx-auto min-h-[100vh] grid grid-cols-1 md:grid-cols-2 gap-24 items-center p-6" id="services"
-      ref={ref}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
+    <div className="container mx-auto min-h-[100vh] grid grid-cols-1 md:grid-cols-2 gap-24 items-center p-6" id="services"
     >
       <div className="flex flex-col justify-center text-justify gap-6">
         <h1 className="text-4xl lg:text-5xl font-Cinzel font-semibold">Our Services</h1>
         <p className="md:text-md font-Cinzel font-semibold">
-          We provide a wide range of servcices, from nail care to hair care, to barbering to <a href="https://bisourose.co.uk/?ref=rgvlq8goclo5" className="text-lightBrown underline-offset-2" target="_blank">eyelash services</a> and more. We have a team of professionals who are ready to serve you.
+        We offer a serene and tranquil beauty space with unrivalled access to exclusive treatments and must have products from the worlds most innovative beauty brands. Our services range from, nail care , hair care, barbering , an exclusive <a href="https://bisourose.co.uk/?ref=rgvlq8goclo5" className="text-lightBrown underline-offset-2" target="_blank">eyelash services</a> and more. Settle into your chair with a magazine in hand and a glass of champagne in the other-our treat . You're here to get pampered and beautified.So, lean back for that spa-worthy scalp massage, and let us do the rest .
         </p>
         <button className="learn-more">
           <span className="circle" aria-hidden="true">
@@ -44,9 +42,9 @@ function Services() {
           <a href="https://instagram.com/officialbisourose?igshid=YmMyMTA2M2Y=" target="_blank"><span className="button-text">Instagram</span></a>
         </button>
       </div>
-        <div className="flex flex-col justify-center items-center h-[300px] w-[300px] lg:h-[600px] lg:w-[600px] shadow-2xl mx-auto rounded-full" style={serviceStyles}>
-        </div>
-    </motion.section>
+          <LazyLoadImage src={nailBarImage} alt="services image" className="h-[300px] w-[300px] lg:h-[600px] lg:w-[600px] shadow-2xl mx-auto rounded-full" effect="blur"/>
+        
+    </div>
   );
 }
 

@@ -4,10 +4,10 @@ import { FaBars } from "react-icons/fa";
 import { Dialog, Transition, Listbox } from '@headlessui/react'
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { HiCheck, HiChevronUpDown} from 'react-icons/hi2'
 import { Fragment, useState } from 'react'
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link, animateScroll } from "react-scroll";
+
 import {
   Drawer,
   DrawerOverlay,
@@ -16,12 +16,12 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 const styles = {
-  backgroundImage: `linear-gradient(rgba(4,9,30,0.8),rgba(4,9,30,0.2)),url(${background})`,
+  backgroundImage: `linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.1)),url(${background})`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
 }
-const people = [
+const services = [
   { name: 'Hair Services' },
   { name: 'Nail Services' },
   { name: 'Eyelash Services' },
@@ -34,18 +34,14 @@ function Header() {
   const [fullName,setFullName] = useState('')
   const [number,setPhoneNumber] = useState('')
   const [date,setDate] = useState('')
-  const [selected, setSelected] = useState(people[0])
- 
-   function closeModal() {
-    console.log(fullName)
-    console.log(date)
-    console.log(number)
-    console.log(selected.name)
-
+  const [time,setTime] = useState('09:00')
+  const [selected, setSelected] = useState(services[0])
+  const sendEmail = () =>{
     const templateParams = {
       from_name: fullName,
       to_name: 'Bisou',
       appointment_date: date,
+      appointment_time:time,
       client_number: number,
       message: selected.name,
    };
@@ -61,9 +57,15 @@ function Header() {
      toast.error('Unable to book an appointment') 
 
     }
+  }
+   function bookAppointment(e: { preventDefault: () => void; }) {
+      e.preventDefault()
+    sendEmail()
     setIsOpen(false)
   }
-
+   function closeModal(){
+    setIsOpen(false)
+   }
   function openModal() {
     setIsOpen(true)
   }
@@ -78,6 +80,10 @@ function Header() {
  const setdate = (e: { target: { value: any; }; })=>{
   const date = e.target.value
   setDate(date)
+}
+const settime = (e: { target: { value: any; }; })=>{
+  const time = e.target.value
+  setTime(time)
 } 
   return (
     <header className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
@@ -85,31 +91,31 @@ function Header() {
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
             <a href="#" className="text-white text-xl font-semibold hover:text-lightBrown">Home</a>
-            <a href="services"><Link
-            className="text-white text-xl font-semibold ml-28 hover:text-lightBrown"
+            <Link
+            className="text-white text-xl font-semibold ml-28 hover:text-lightBrown cursor-pointer"
     activeClass="active"
     to="services"
     spy={true}
     smooth={true}
     offset={-70}
     duration={700}
->Services</Link></a>
-            <a href="#gallery"><Link
-    className="text-white text-xl font-semibold ml-28 hover:text-lightBrown"
+>Services</Link>
+            <Link
+    className="text-white text-xl font-semibold ml-28 hover:text-lightBrown cursor-pointer"
     to="gallery"
     spy={true}
     smooth={true}
     offset={-70}
     duration={900}
->Gallery</Link></a>
-            <a href="#contact"><Link
-    className="text-white text-xl font-semibold ml-28 hover:text-lightBrown"
+>Gallery</Link>
+            <Link
+    className="text-white text-xl font-semibold ml-28 hover:text-lightBrown cursor-pointer"
     to="contact"
     spy={true}
     smooth={true}
     offset={-70}
     duration={900}
->Contact</Link></a>
+>Contact</Link>
           </div>
           <div className="lg:hidden flex pr-4">
             <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl"/></button>
@@ -135,9 +141,31 @@ function Header() {
           <DrawerCloseButton />
           <div className="nav-links flex flex-col font-Cinzel mt-24 gap-6">
             <a href="/" className="text-black text-2xl font-semibold hover:text-lightBrown">Home</a>
-            <a href="#services" className="text-black text-2xl font-semibold hover:text-lightBrown">Services</a>
-            <a href="#gallery" className="text-black text-2xl font-semibold hover:text-lightBrown">Gallery</a>
-            <a href="#contact" className="text-black text-2xl font-semibold hover:text-lightBrown">Contact</a>
+            <Link
+            className="text-black text-2xl font-semibold hover:text-lightBrown cursor-pointer"
+    activeClass="active"
+    to="services"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={700}
+>Services</Link>
+            <Link
+    className="text-black text-2xl font-semibold hover:text-lightBrown cursor-pointer"
+    to="gallery"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={900}
+>Gallery</Link>
+            <Link
+    className="text-black text-2xl font-semibold hover:text-lightBrown cursor-pointer"
+    to="contact"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={900}
+>Contact</Link>
           </div>
         </DrawerContent>
       </Drawer>
@@ -174,11 +202,11 @@ function Header() {
                     Book an Appointment
                   </Dialog.Title>
                   <div className="mt-4 font-Cinzel">
-                    <form className="flex flex-col">
-                    <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full" value={fullName} onChange={setName}/>
-                    <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-4" value={number} onChange={setNumber}/>
-                    <input type="date" className="p-4 border-2 border-black w-full mt-4" value={date} onChange={setdate}/>
-                    
+                    <form className="flex flex-col" onSubmit={bookAppointment}>
+                    <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full" value={fullName} onChange={setName} required/>
+                    <input type="text" placeholder="Phone Number" className="p-4 border-2 border-black w-full mt-4" value={number} onChange={setNumber} required/>
+                    <input type="date" className="p-4 border-2 border-black w-full mt-4" value={date} onChange={setdate} required/>
+                    <input type="time" className="p-4 border-2 border-black w-full mt-4" value={time} onChange={settime} min="09:00" max="18:00" required/>
                     <div className="flex flex-col mt-4">
                     <p className="font-semibold">Pick a Service</p>
                     <Listbox value={selected} onChange={setSelected}>
@@ -200,15 +228,15 @@ function Header() {
                         leaveTo="opacity-0"
                       >
                         <Listbox.Options className="relative h-auto w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                          {people.map((person, personIdx) => (
+                          {services.map((service, serviceIdx) => (
                             <Listbox.Option
-                              key={personIdx}
+                              key={serviceIdx}
                               className={({ active }) =>
                                 `relative cursor-default select-none py-2 pl-10 pr-4 ${
                                   active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'
                                 }`
                               }
-                              value={person}
+                              value={service}
                             >
                               {({ selected }) => (
                                 <>
@@ -217,7 +245,7 @@ function Header() {
                                       selected ? 'font-medium' : 'font-normal'
                                     }`}
                                   >
-                                    {person.name}
+                                    {service.name}
                                   </span>
                                   {selected ? (
                                     <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
@@ -233,17 +261,15 @@ function Header() {
                     </div>
                   </Listbox>
                     </div>
-                    </form>
-                  </div>
-
-                  <div className="mt-8">
+                    <div className="mt-8">
                     <button
-                      type="button"
+                      type="submit"
                       className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-Cinzel text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
                     >
                       Book Now!
                     </button>
+                  </div>
+                    </form>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

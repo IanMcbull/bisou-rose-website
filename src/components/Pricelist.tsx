@@ -1,4 +1,3 @@
-import Logo from "../assets/images/logo.png";
 function Pricelist() {
   return (
     <section className="container mx-auto max-h-[150vh] flex flex-col justify-center items-center p-4 mb-10" id="pricelist">
