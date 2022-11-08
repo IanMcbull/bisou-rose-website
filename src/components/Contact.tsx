@@ -8,7 +8,9 @@ function Contact() {
     const [number,setPhoneNumber] = useState('')
     const [message,setMessage] = useState('')
     const [email,setEmail] = useState('')
-  const contactUsEmailJS = () =>{
+  const contactUsEmailJS = (e: { preventDefault: () => void; }) =>{
+    e.preventDefault();
+    console.log(message)
       const templateParams = {
         from_name: fullName,
         to_name: 'Bisou',
@@ -19,7 +21,7 @@ function Contact() {
       try {
         emailjs.send(
           'service_cv4aqzr',
-          'template_fgsobhi',
+          'template_powcw7h',
           templateParams,
           'uEYl8RsJL5qf44q4b'
       )
@@ -51,7 +53,7 @@ function Contact() {
         <p className="text-xl font-Cinzel font-semibold">We are here to help you</p>
         <form onSubmit={contactUsEmailJS}>
             <div className="flex">
-                <input type="text" placeholder="Full Name" className="p-4 border-2 border-black w-full" value={fullName} onChange={setName}/>
+                <input type="text" required placeholder="Full Name" className="p-4 border-2 border-black w-full" value={fullName} onChange={setName}/>
                 
             </div>
                 <input type="email" required placeholder="Email" className="p-4 border-2 border-black w-full mt-6" value={email} onChange={setemail}/>
