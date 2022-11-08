@@ -55,9 +55,9 @@ function Header() {
     toast.success('Successfully Booked')
     } catch (error) {
      toast.error('Unable to book an appointment') 
-
     }
   }
+  
    function bookAppointment(e: { preventDefault: () => void; }) {
       e.preventDefault()
     sendEmail()
@@ -124,7 +124,7 @@ const settime = (e: { target: { value: any; }; })=>{
         <div className="flex flex-col h-96 justify-center container mx-auto gap-5 items-center place-self-center">
           {/* <h1 className="text-lightBrown text-4xl md:text-6xl font-Cinzel font-semibold text-center">Bisou Rose</h1> */}
           <p className="text-white text-xl md:text-2xl font-Cinzel font-semibold text-center">Masterpiece to beauty</p>
-         <button className="bg-[#814d2a] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
+         <button className="bg-[rgb(129,77,42)] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
          onClick={openModal}
           >Book an Appointment</button>
           <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>

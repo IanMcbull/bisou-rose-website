@@ -1,32 +1,10 @@
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
-
-const boxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0 }
-};
 import nailBarImage from '../assets/images/nail-polish-image.jpg';
-const serviceStyles = {
-    backgroundImage: `url(${nailBarImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-
-}
 function Services() {
   const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
+  
   return (
     <div className="container mx-auto min-h-[100vh] grid grid-cols-1 md:grid-cols-2 gap-24 items-center p-6" id="services"
     >

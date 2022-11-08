@@ -6,6 +6,27 @@ img{
   display: block;
   max-width: 100%;
 }
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #814d2a #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #814d2a;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
 
 .kenburns-top-right{-webkit-animation:kenburns-top-right 5s ease-out alternate-reverse both;animation:kenburns-top-right 5s ease-out alternate-reverse both}
 /* ----------------------------------------------
