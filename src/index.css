@@ -298,3 +298,101 @@ button {
    opacity: 0.4;
   }
  }
+
+ .gallery{
+  display: grid;
+  min-height: 100vh;
+  gap:30px;
+  padding: 10px;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+ }
+
+
+ .image-one{
+  background: url(./assets/images/nail-bar-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 400px;
+ }
+  .image-two{
+    background: url(./assets/images/seats-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .image-three{
+    background: url(./assets/images/corousel-5.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .image-four{
+    background: url(./assets/images/snack-bar-2-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+  .image-five{
+    background: url(./assets/images/macbook-table-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+ 
+
+  @media screen and (min-width:800px) {
+    .gallery{
+      display: grid;
+      min-height: 100vh;
+      gap:30px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+     }
+    
+     .image-one{
+      grid-column: 1/2;
+      grid-row: 2/4;
+      background: url(./assets/images/nail-bar-image.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    
+     }
+      .image-two{
+       grid-column: 2/3;
+        grid-row: 1/3;
+        background: url(./assets/images/seats-image.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .image-three{
+        grid-column: 3/4;
+        grid-row: 1/2;
+        background: url(./assets/images/corousel-5.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .image-four{
+        grid-column: 3/4;
+        grid-row: 2/4;
+        background: url(./assets/images/snack-bar-2-image.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+      }
+      .image-five{
+        grid-column: 2/3;
+        grid-row: 3/4;
+        background: url(./assets/images/macbook-table-image.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      } 
+  }
