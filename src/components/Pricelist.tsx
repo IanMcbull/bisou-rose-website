@@ -11,11 +11,11 @@ function Pricelist() {
            </div>
            <div className="flex justify-between font-Cinzel mb-4">
               <p className="text-lg font-bold">Dry Maicure Manicure</p>
-              <p className="font-semibold">ksh 1000</p>
+              <p className="font-semibold">ksh 1500</p>
            </div>
            <div className="flex justify-between font-Cinzel mb-4">
               <p className="text-lg font-bold">French Manicure</p>
-              <p className="font-semibold">ksh 1000</p>
+              <p className="font-semibold">ksh 2000</p>
            </div>
 
            <h2 className="font-Cinzel text-2xl pb-2 border-b-black border-b-4 mt-8 text-lighterBrown font-bold">Hair Care</h2>
