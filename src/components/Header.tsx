@@ -90,7 +90,12 @@ const settime = (e: { target: { value: any; }; })=>{
         <nav className="container mx-auto flex justify-between items-center py-10">
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
-            <a href="#" className="text-white text-xl font-semibold hover:text-lightBrown">Home</a>
+          <Link className="text-black text-2xl font-semibold hover:text-lightBrown" activeClass="active"
+    to="/"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={700}>Home</Link>
             <Link
             className="text-white text-xl font-semibold ml-28 hover:text-lightBrown cursor-pointer"
     activeClass="active"
@@ -140,7 +145,12 @@ const settime = (e: { target: { value: any; }; })=>{
         <DrawerContent className="p-4">
           <DrawerCloseButton />
           <div className="nav-links flex flex-col font-Cinzel mt-24 gap-6">
-            <a href="/" className="text-black text-2xl font-semibold hover:text-lightBrown">Home</a>
+            <Link className="text-black text-2xl font-semibold hover:text-lightBrown" activeClass="active"
+    to="/"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={700}>Home</Link>
             <Link
             className="text-black text-2xl font-semibold hover:text-lightBrown cursor-pointer"
     activeClass="active"

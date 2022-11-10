@@ -1,16 +1,10 @@
-import CardOne from "../assets/images/seats-image.jpg"
-import CardTwo from "../assets/images/nail-bar-wide-2-image.jpg"
-import CardThree from "../assets/images/mirrors-image.jpg"
-import CardFour from "../assets/images/macbook-table-image.jpg"
-import CardFive from "../assets/images/nail-polish-image.jpg"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 function Gallery() {
   return (
       <section className="min-h-[100vh]">
          <div className="container mx-auto gallery font-Cinzel">
             <div className="content flex flex-col justify-evenly">
                  <h2 className="text-7xl">Bisou <span className="text-[rgb(129,77,42)]">Gallery</span></h2>
-                 <p className="text-justify font-semibold text-sm">We are excited to welcome you to our beauty salon, bringing a touch of London to Nairobi! 🥂</p> 
+                 <p className="text-justify font-semibold text-md">We are excited to welcome you to our beauty salon, bringing a touch of London to Nairobi! 🥂</p> 
             </div>
             <div className="image-one rounded-md"></div>
             <div className="image-two rounded-md"></div>

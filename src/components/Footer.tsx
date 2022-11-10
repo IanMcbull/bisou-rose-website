@@ -30,7 +30,7 @@ function Footer() {
               </div>
               <div className="flex space-x-2">
               <FaMapPin className="text-white text-2xl"/>
-              <p className="max-w-[400px] text-sm font-semibold">Nova Apartments, Waiyaki Way</p>
+              <p className="max-w-[400px] text-sm font-semibold">1st floor, Nova, Muthangari Drive</p>
               </div>
             </div>
           </div>

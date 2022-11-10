@@ -306,7 +306,7 @@ button {
   padding: 10px;
 
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows:auto repeat(5, 1fr);
  }
 
 

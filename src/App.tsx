@@ -5,6 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import Pricelist from "./components/Pricelist";
+import VideoView from "./components/VideoView";
 
 function App() {
   return (
