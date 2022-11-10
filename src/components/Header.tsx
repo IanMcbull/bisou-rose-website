@@ -90,7 +90,7 @@ const settime = (e: { target: { value: any; }; })=>{
         <nav className="container mx-auto flex justify-between items-center py-10">
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
-          <Link className="text-black text-2xl font-semibold hover:text-lightBrown" activeClass="active"
+          <Link className="text-white text-2xl font-semibold hover:text-lightBrown" activeClass="active"
     to="/"
     spy={true}
     smooth={true}
