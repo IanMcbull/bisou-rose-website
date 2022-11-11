@@ -1,6 +1,6 @@
 function Gallery() {
   return (
-      <section className="min-h-[100vh]">
+      <section className="min-h-[100vh] my-28">
          <div className="container mx-auto gallery font-Cinzel">
             <div className="content flex flex-col justify-evenly">
                  <h2 className="text-7xl">Bisou <span className="text-[rgb(129,77,42)]">Gallery</span></h2>
