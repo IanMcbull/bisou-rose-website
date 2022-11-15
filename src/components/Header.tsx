@@ -117,8 +117,8 @@ const settime = (e: { target: { value: any; }; })=>{
     duration={900}
 >Contact</Link>
           </div>
-          <div className="lg:hidden flex pr-4">
-            <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl mt-[-70px]"/></button>
+          <div className="lg:hidden flex pr-4 self-start">
+            <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl "/></button>
           </div>
         </nav>
         <div className="flex flex-col h-96 justify-center container mx-auto gap-16 md:gap-5 items-center place-self-center">
