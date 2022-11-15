@@ -147,7 +147,7 @@ const settime = (e: { target: { value: any; }; })=>{
         <DrawerContent className="p-4">
           <DrawerCloseButton />
           <div className="nav-links flex flex-col font-Cinzel mt-24 gap-6">
-            <Link className="text-black text-2xl font-semibold hover:text-lightBrown" activeClass="active"
+            <Link className="text-black text-2xl font-semibold hover:text-lightBrown cursor-pointer" activeClass="active"
     to="/"
     spy={true}
     smooth={true}
