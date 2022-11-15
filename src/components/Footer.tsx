@@ -28,7 +28,7 @@ function Footer() {
                     <a href="https://www.tiktok.com/@officialbisourose?_t=8Wxio4wNWRK&_r=1" target="_blank"><FaTiktok className="text-white text-2xl"/></a>
                     <a href="https://wa.me/+254713603866" target="_blank"><FaWhatsapp className="text-white text-2xl"/></a>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-2 justify-center">
               <FaMapPin className="text-white text-2xl"/>
               <p className="max-w-[400px] text-sm font-semibold">1st floor, Nova, Muthangari Drive</p>
               </div>
