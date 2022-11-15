@@ -141,6 +141,7 @@ const settime = (e: { target: { value: any; }; })=>{
 
         placement='right'
         onClose={onClose}
+        returnFocusOnClose={false}
       >
         <DrawerOverlay />
         <DrawerContent className="p-4">
