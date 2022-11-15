@@ -1,4 +1,4 @@
-import background from "../assets/images/corousel-1.jpg";
+import background from "../assets/images/corousel-3.jpg";
 import Logo from "../assets/images/logo.png";
 import { FaBars } from "react-icons/fa";
 import { Dialog, Transition, Listbox } from '@headlessui/react'
@@ -88,7 +88,7 @@ const settime = (e: { target: { value: any; }; })=>{
   return (
     <header className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
         <nav className="container mx-auto flex justify-between items-center py-10">
-          <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44"/>
+          <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44 ml-2"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
           <Link className="text-white text-2xl font-semibold hover:text-lightBrown" activeClass="active"
     to="/"
@@ -127,9 +127,16 @@ const settime = (e: { target: { value: any; }; })=>{
           </div>
         </nav>
         <div className="flex flex-col h-96 justify-center container mx-auto gap-5 items-center place-self-center">
-          {/* <h1 className="text-lightBrown text-4xl md:text-6xl font-Cinzel font-semibold text-center">Bisou Rose</h1> */}
-          <p className="text-white text-xl md:text-2xl font-Cinzel font-semibold text-center">Masterpiece to beauty</p>
-         <button className=" bg-[rgb(129,77,42)] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
+          <p className="text-white text-3xl md:text-2xl font-Cinzel font-semibold text-center">Masterpiece to beauty</p>
+          <div className="hidden md:flex flex-col items-center">
+          <button className=" bg-[rgb(129,77,42)] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
+         onClick={openModal}
+          >Book an Appointment</button>
+          <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>
+          </div>
+        </div>
+        <div className="flex flex-col items-center relative md:hidden gap-2">
+        <button className=" bg-[rgb(129,77,42)] p-3 text-white font-bold shadow-xl text-md hover:bg-lightBrown"
          onClick={openModal}
           >Book an Appointment</button>
           <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>

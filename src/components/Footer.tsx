@@ -6,7 +6,7 @@ function Footer() {
       <section className="container mx-auto flex flex-col space-y-6 md:flex-row items-center">
         <div className="w-1/4 flex flex-col space-y-16 items-center mb-8">
           <img src={Logo} alt="footer logo" className="w-24" />
-          <div className="space-y-1 min-w-[200px]">
+          <div className="space-y-1 min-w-[200px] flex flex-col items-center">
             <p className="text-white font-Cinzel text-md font-semibold">
               Copyright &#169;2022
             </p>

@@ -10,7 +10,7 @@ function Services() {
     >
       <div className="flex flex-col justify-center md:text-justify gap-6">
         <h1 className="text-4xl lg:text-5xl font-Cinzel font-semibold">Our Services</h1>
-        <p className="md:text-md font-Cinzel font-semibold">
+        <p className="md:text-md font-Cinzel font-semibold leading-2">
         We offer a serene and tranquil beauty space with unrivalled access to exclusive treatments and must have products from the worlds most innovative beauty brands. Our services range from, nail care , hair care, barbering , an exclusive <a href="https://bisourose.co.uk/?ref=rgvlq8goclo5" className="text-lightBrown underline-offset-2" target="_blank">eyelash services</a> and more. Settle into your chair with a magazine in hand and a glass of champagne in the other-our treat . You're here to get pampered and beautified.So, lean back for that spa-worthy scalp massage, and let us do the rest .
         </p>
         <button className="learn-more">
