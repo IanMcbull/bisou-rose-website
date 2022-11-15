@@ -126,20 +126,14 @@ const settime = (e: { target: { value: any; }; })=>{
             <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl mt-[-70px]"/></button>
           </div>
         </nav>
-        <div className="flex flex-col h-96 justify-center container mx-auto gap-5 items-center place-self-center">
+        <div className="flex flex-col h-96 justify-center container mx-auto gap-16 md:gap-5 items-center place-self-center">
           <p className="text-white text-3xl md:text-2xl font-Cinzel font-semibold text-center">Masterpiece to beauty</p>
-          <div className="hidden md:flex flex-col items-center">
+          <div className="flex flex-col items-center">
           <button className=" bg-[rgb(129,77,42)] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
          onClick={openModal}
           >Book an Appointment</button>
           <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>
           </div>
-        </div>
-        <div className="flex flex-col items-center relative md:hidden gap-2">
-        <button className=" bg-[rgb(129,77,42)] p-3 text-white font-bold shadow-xl text-md hover:bg-lightBrown"
-         onClick={openModal}
-          >Book an Appointment</button>
-          <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>
         </div>
       
         <Drawer
