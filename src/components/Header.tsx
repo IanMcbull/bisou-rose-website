@@ -86,12 +86,12 @@ const settime = (e: { target: { value: any; }; })=>{
   setTime(time)
 } 
   return (
-    <header className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
+    <header id="home" className="min-h-[100vh] flex flex-col font-Cinzel" style={styles}>
         <nav className="container mx-auto flex justify-between items-center py-10">
           <img src={Logo} alt="Logo image for Bisou Rose" className=" w-32 md:w-44 ml-2"/>
           <div className="nav-links hidden lg:flex font-Cinzel">
           <Link className="text-white text-2xl font-semibold hover:text-lightBrown" activeClass="active"
-    to="/"
+    to="home"
     spy={true}
     smooth={true}
     offset={-70}
