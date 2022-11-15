@@ -17,13 +17,13 @@ function Footer() {
         </div>
         <div className="w-3/4 flex flex-col space-y-16">
           <div className="text-white font-Cinzel">
-            <p className="mb-4 font-bold text-sm">
+            <p className="mb-4 font-bold text-sm text-center md:text-left">
               Give us a call
-              <span className="font-light ml-4"> +254-743-565-565</span>
+              <a className="font-bold text-white font-Cinzel text-sm hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>
             </p>
             <hr className="text-white font-bold" />
             <div className="flex flex-col justify-between mt-6 md:flex-row md:items-center gap-4">
-              <div className="social-links flex space-x-4">
+              <div className="social-links flex space-x-4 mx-auto md:m-0">
                     <a href="https://instagram.com/officialbisourose?igshid=YmMyMTA2M2Y=" target="_blank"><FaInstagram className="text-white text-2xl"/></a>
                     <a href="https://www.tiktok.com/@officialbisourose?_t=8Wxio4wNWRK&_r=1" target="_blank"><FaTiktok className="text-white text-2xl"/></a>
                     <a href="https://wa.me/+254713603866" target="_blank"><FaWhatsapp className="text-white text-2xl"/></a>

@@ -1,4 +1,4 @@
-import background from "../assets/images/corousel-2.jpg";
+import background from "../assets/images/corousel-1.jpg";
 import Logo from "../assets/images/logo.png";
 import { FaBars } from "react-icons/fa";
 import { Dialog, Transition, Listbox } from '@headlessui/react'
@@ -20,7 +20,7 @@ const styles = {
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
-}
+  }
 const services = [
   { name: 'Hair Services' },
   { name: 'Nail Services' },
@@ -123,13 +123,13 @@ const settime = (e: { target: { value: any; }; })=>{
 >Contact</Link>
           </div>
           <div className="lg:hidden flex pr-4">
-            <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl"/></button>
+            <button type="button" onClick={onOpen}><FaBars  className="text-white text-5xl mt-[-70px]"/></button>
           </div>
         </nav>
         <div className="flex flex-col h-96 justify-center container mx-auto gap-5 items-center place-self-center">
           {/* <h1 className="text-lightBrown text-4xl md:text-6xl font-Cinzel font-semibold text-center">Bisou Rose</h1> */}
           <p className="text-white text-xl md:text-2xl font-Cinzel font-semibold text-center">Masterpiece to beauty</p>
-         <button className="bg-[rgb(129,77,42)] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
+         <button className=" bg-[rgb(129,77,42)] p-4 text-white font-bold shadow-xl hover:bg-lightBrown"
          onClick={openModal}
           >Book an Appointment</button>
           <a className="font-bold text-white font-Cinzel text-xl hover:underline-offset-1" href="tel:+254743565565"> (+254)743565565 </a>
